@@ -1,1 +1,20 @@
 **EVENT DRIVEN ARCHITECTURE (EDA)**
+
+--> Used for *Microservices* : Having separate Backend servers for different services. eg: for an E-commerce backend, microservices architecture has separate servers to handle independent services lyk - orders, products, payments etc. (which acn be independently scaled up/down acc. to the need).
+
+*Drawbacks of a non-EDA or Traditional architecture*
+- Imagine a system having 4 servers for 4 microservices.
+- To make all the servers communicate with each other --> we need 4C2 no. of (req, res) communication/connectivity lines, (i.e, one server makes a request(http)...the other one responds).
+- This makes the system complex & *Tightly Coupled*.
+- In a Tightly coupled system, although the services are indepedent, yet, due to a large no. of connections which have to be maintained, failure of one server outstretches its effects to all other services connected to it (effecting their individual latency).
+- This makes the system not easily scalable & hard to maintain over time.
+
+*Benefits of EDA*
+- In this kind of an architecture, the services are highly "De-coupled" (They are not connected directly with each other).
+- Individual & independent scaling becones much easier & faster.
+- Latency is very less compared to non-EDA systems.
+
+#Components of EDA
+1. Producer: Produces events to be listened to in the EDA stream.
+2. Broker: Manages & streamlines the event stream inside the EDA. (eg: Kafka, RabbitMQ)
+3. Consumer: Microservice(server) which listens to the events assigned to it & resolves/processes them.
