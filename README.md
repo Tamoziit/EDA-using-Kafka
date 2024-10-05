@@ -1,4 +1,5 @@
 # EDA-using-Kafka
 
 **System Design**
-<img alt="SD" width="420" src="EDA_SD.png">
+<br />
+<img align="center" width="1600" alt="SD" width="420" src="EDA_SD.png">
