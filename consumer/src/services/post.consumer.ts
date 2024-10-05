@@ -2,7 +2,7 @@ import kafkaConfig from "../config/kafka.config";
 import PostModel from "../models/post.model";
 
 export const postConsumer = async () => {
-    const messages: any[] = [];
+    const messages: any[] = []; //event Queue
     let processing = false;
 
     try {
